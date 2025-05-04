@@ -1,4 +1,3 @@
-"use strict";
 // assignments 1 
 // function calculate(numOne: number, numTwo: number): number {
 //     return numOne + numTwo;
@@ -69,3 +68,80 @@
 // The Value Is true And Type Is boolean
 // The Value Is true And Type Is boolean
 // Done
+// PART 2 
+// assignment 1
+// Write Your Code Here
+// type n = number 
+// // Do Not Edit Here
+// let myData: n;
+// myData = 1000; // No Problem Here
+// myData = +true; // No Problem Here
+// assignment 2
+// Write Your Code Here
+// type mix = number | boolean;
+// // Do Not Edit Here
+// let myInfo: mix;
+// myInfo = 1000; // No Problem Here
+// myInfo = true; // No Problem Here
+// assignment 3
+// Write Your Code Here
+// type Info = {
+//     theName: string;
+//     theAge: number;
+// }
+// type Full = Info & {
+//     country: string;
+// }
+// // Do Not Edit Here
+// function showInfo(data: Info) {
+//     console.log(`The Name Is ${data.theName}`);
+//     console.log(`The Age Is ${data.theAge}`);
+//   }
+//   console.log(showInfo({ theName: "Elzero", theAge: 40 }));
+//   function showFullInfo(data: Full) {
+//     console.log(`The Name Is ${data.theName}`);
+//     console.log(`The Age Is ${data.theAge}`);
+//     console.log(`The Country Is ${data.country}`);
+//   }
+//   console.log(showFullInfo({ theName: "Elzero", theAge: 4, country: "Egypt" }));
+// assignment 4
+// function yesOrNo(val: number | boolean) : "Yes" | "No" {
+//     if ( typeof val === "boolean" ) {
+//         return val ? "Yes" : "No";
+//     } else if( typeof val === "number" ) {
+//         return val > 10 ? "Yes" : "No";
+//     }
+// }
+//   // Do Not Edit Here
+//   console.log(yesOrNo("100")); // Error
+//   console.log(yesOrNo(30)); // True
+//   console.log(yesOrNo(8)); // False
+// assignment 5
+// type custom = "Yes" | "No" ;
+// function isHeOld(age: number ) : custom  {
+//     return age > 40 ? "Yes" : "No";
+// }
+//   // Do Not Edit Here
+//   console.log(isHeOld("100")); // Error
+//   console.log(isHeOld(45)); // "Yes"
+//   console.log(isHeOld(30)); // "No"
+// assignment 6
+// const post : readonly [number, string, boolean] = [100, "Title", true];
+// const [id, title, state] = post;
+// console.log(id); // 100
+// console.log(title); // "Title"
+// console.log(state); // true
+// assignment 7
+var Game;
+(function (Game) {
+    Game[Game["Easy"] = 100] = "Easy";
+    Game[Game["Medium"] = 80] = "Medium";
+    Game[Game["Hard"] = -10] = "Hard";
+    Game[Game["Insane"] = (function (easy, medium) {
+        return easy + medium;
+    })(Game.Easy, Game.Medium)] = "Insane";
+})(Game || (Game = {}));
+console.log(Game.Easy); // 100
+console.log(Game.Medium); // 80
+console.log(Game.Hard); // 30
+console.log(Game.Insane); // 20
